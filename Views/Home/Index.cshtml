@@ -1,0 +1,142 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/StyleSheet.css">
+    <title>Grocery Store</title>
+</head>
+<body>
+    <nav>
+        <div class="logo-container">
+            <img src="./img/logo.png" alt="logo">
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Dishes</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">Reviews</a></li>
+                <li><a href="">Order</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <section>
+
+    <div class="slidercontainer">  
+        <div class="showSlide fade">  
+            <img src="img/b1.jpg" />  
+        </div>  
+        <div class="showSlide fade">  
+            <img src="img/b2.jpg" />   
+        </div>  
+  
+        <div class="showSlide fade">  
+            <img src="img/b3.jpg" />  
+        </div>   
+        <!-- Navigation arrows   -->
+        <a class="left" onclick="nextSlide(-1)">❮</a>  
+        <a class="right" onclick="nextSlide(1)">❯</a>  
+    </div> 
+
+</section>
+
+    <section>
+        <br><br><br><br><br><br><br><br><br>
+        <div class="feather-text">
+            <h1>Our Products</h1>
+        </div>
+        <br><br>
+        <div class="outer-div">
+
+            <div class="first-div">
+                <img src="./img/1.png" alt="">
+                <h2>Apple</h2>
+                <p class="div-paragh">Lorem ipsum dolor sit amet, consectetuer 
+                    adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                    <div class="read-more">
+                        <button>Buy</button>
+                </div>
+            </div>
+
+
+            <div class="first-div">
+                <img src="./img/2.png" alt="">
+                <h2>Bananna</h2>
+                <p class="div-paragh">Lorem ipsum dolor sit amet, consectetuer 
+                    adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                    <div class="read-more">
+                        <button>Buy</button>
+                </div>
+            </div>
+            <div class="first-div">
+                <img src="./img/3.png" alt="">
+                <h2>Mango</h2>
+                <p class="div-paragh">Lorem ipsum dolor sit amet, consectetuer 
+                    adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                    <div class="read-more">
+                        <button>Buy</button>
+                </div>
+            </div>
+            <div class="first-div">
+                <img src="./img/4.png" alt="">
+                <h2>Tomoto</h2>
+                <p class="div-paragh">Lorem ipsum dolor sit amet, consectetuer 
+                    adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                    <div class="read-more">
+                    <button>Buy</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <br><br><br><br><br><br>
+   <section class="footer">
+    <div class="footer-outer">
+        <div class="footer-img">
+            <img src="./img/logo.png" alt="logo">
+        </div>
+
+        <div class="content-div">
+            <p>Email: 19101001-039@uskt.edu.pk</p>
+            <p>Phone: +92 3034563897</p>
+            <p>Location: Front of marquee cantt sialkot</p>
+        </div>
+    </div>
+   </section>
+    
+
+   <script type="text/javascript">  
+    var slide_index = 1;  
+    displaySlides(slide_index);  
+
+    function nextSlide(n) {  
+        displaySlides(slide_index += n);  
+    }  
+
+    function currentSlide(n) {  
+        displaySlides(slide_index = n);  
+    }  
+
+    function displaySlides(n) {  
+        var i;  
+        var slides = document.getElementsByClassName("showSlide");  
+        if (n > slides.length) { slide_index = 1 }  
+        if (n < 1) { slide_index = slides.length }  
+        for (i = 0; i < slides.length; i++) {  
+            slides[i].style.display = "none";  
+        }  
+        slides[slide_index - 1].style.display = "block";  
+    }  
+</script>  
+</body>
+</html>
